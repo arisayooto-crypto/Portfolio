@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ชื่อของคุณ</title>
+    <style>
+        /* ====================
+           CSS STYLES
+           ==================== */
+        :root {
+            --primary-color: #3498db; /* สีน้ำเงินสดใส */
+            --secondary-color: #2c3e50; /* สีกรมท่าเข้ม */
+            --background-color: #ecf0f1; /* สีเทาอ่อนมาก */
+            --text-color: #333;
+            --font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* ส่วนหัว (Header/Navigation) */
+        .header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* ส่วนหลัก (Sections) */
+        .section {
+            padding: 4rem 5%;
+            margin-bottom: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        /* สไตล์ทันสมัย: ยกขึ้นเมื่อวางเมาส์เหนือ */
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            display: inline-block; /* ทำให้เส้นขีดอยู่ใต้ข้อความเท่านั้น */
+        }
+        
+        /* ส่วนเกี่ยวกับฉัน (Hero Section) */
+        #about {
+            background-color: #fff;
+            text-align: center;
+            padding: 6rem 5%;
+        }
+
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9; /* สีเข้มขึ้น */
+        }
+
+        /* ส่วนโปรเจกต์ (Projects) */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .project-info h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        /* ส่วนท้าย (Footer) */
+        .footer {
+            text-align: center;
+            padding: 1.5rem 5%;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>[ชื่อของคุณ]</h1>
+        <nav class="nav">
+            <a href="#about">เกี่ยวกับฉัน</a>
+            <a href="#skills">ทักษะ</a>
+            <a href="#portfolio">ผลงาน</a>
+            <a href="#contact">ติดต่อ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <img src="your-photo.jpg" alt="รูปภาพของคุณ" id="profile-pic">
+            <h2>สวัสดี! ฉันคือ [ชื่อ-นามสกุล]</h2>
+            <p>ฉันเป็น [ตำแหน่ง/สาขาที่สนใจ] ที่หลงใหลในการสร้างสรรค์เว็บไซต์และโซลูชั่นดิจิทัลที่สวยงามและใช้งานง่าย</p>
+            <p>ความเชี่ยวชาญของฉันคือ [ระบุทักษะหลัก เช่น Frontend Development, UI/UX Design]</p>
+            <a href="#contact" class="cta-button">ติดต่อฉัน</a>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>🚀 ทักษะของฉัน</h2>
+            <ul id="skill-list">
+                <li>HTML5 & CSS3 (Flexbox, Grid)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>[Framework/Library เช่น React, Vue.js, jQuery]</li>
+                <li>[Design Tool เช่น Figma, Adobe XD]</li>
+                <li>[Backend/Database เช่น Node.js, PHP, MySQL]</li>
+            </ul>
+        </section>
+        
+        <section id="portfolio" class="section">
+            <h2>💼 ผลงานล่าสุด</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project-1-thumb.jpg" alt="ภาพตัวอย่างโครงการ 1">
+                    <div class="project-info">
+                        <h3>ชื่อโครงการ 1: [ระบุชื่อ]</h3>
+                        <p>รายละเอียดสั้นๆ: [คำอธิบายสั้นๆ เกี่ยวกับสิ่งที่ทำ]</p>
+                        <a href="project-1-link" target="_blank">ดูผลงาน &gt;</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-2-thumb.jpg" alt="ภาพตัวอย่างโครงการ 2">
+                    <div class="project-info">
+                        <h3>ชื่อโครงการ 2: [ระบุชื่อ]</h3>
+                        <p>รายละเอียดสั้นๆ: [คำอธิบายสั้นๆ เกี่ยวกับสิ่งที่ทำ]</p>
+                        <a href="project-2-link" target="_blank">ดูผลงาน &gt;</a>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>📧 ติดต่อฉัน</h2>
+            <p>คุณสามารถติดต่อฉันได้ทาง:</p>
+            <ul>
+                <li>**อีเมล:** <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li>**โทรศัพท์:** [เบอร์โทรศัพท์ของคุณ]</li>
+                <li>**LinkedIn:** <a href="your-linkedin-link" target="_blank">linkedin.com/in/[yourname]</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 [ชื่อของคุณ]. สงวนลิขสิทธิ์.</p>
+    </footer>
+
+    <script>
+        /* ====================
+           JAVASCRIPT LOGIC
+           ==================== */
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // โค้ดที่นี่จะทำงานเมื่อหน้าเว็บโหลดเสร็จ
+            
+            // ตัวอย่าง: เพิ่มความสามารถในการสลับสีพื้นหลังของส่วนทักษะเมื่อกดปุ่ม
+            const skillList = document.getElementById('skill-list');
+            const skillsSection = document.getElementById('skills');
+
+            // เพิ่มปุ่มสำหรับฟังก์ชัน JS
+            const jsButton = document.createElement('button');
+            jsButton.textContent = 'สลับสีพื้นหลัง (JS Demo)';
+            jsButton.style.marginTop = '20px';
+            jsButton.style.padding = '10px 15px';
+            jsButton.style.backgroundColor = 'var(--secondary-color)';
+            jsButton.style.color = 'white';
+            jsButton.style.border = 'none';
+            jsButton.style.borderRadius = '5px';
+            jsButton.style.cursor = 'pointer';
+            skillsSection.appendChild(jsButton);
+
+            jsButton.addEventListener('click', () => {
+                const currentColor = skillsSection.style.backgroundColor;
+                if (currentColor === 'lightblue') {
+                    skillsSection.style.backgroundColor = 'white';
+                } else {
+                    skillsSection.style.backgroundColor = 'lightblue';
+                }
+            });
+
+            // ตัวอย่าง: การแจ้งเตือนเมื่อคลิกรูปโปรไฟล์
+            const profilePic = document.getElementById('profile-pic');
+            profilePic.style.cursor = 'pointer'; // เปลี่ยนเคอร์เซอร์เพื่อบอกว่าเป็นส่วนที่คลิกได้
+            profilePic.addEventListener('click', () => {
+                alert('คุณกำลังดูรูปโปรไฟล์ของ [ชื่อของคุณ]! ยินดีที่ได้รู้จักค่ะ/ครับ');
+            });
+
+        });
+    </script>
+</body>
+</html>
